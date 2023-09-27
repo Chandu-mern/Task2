@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Task 2</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1>String with letters in Alphabetical order</h1>
+      <input type="text" id="input" placeholder="Enter String" />
+      <button onclick="btn()">Alphabetical Order</button>
+      <p>Output:<span id="output"></span></p>
+    </div>
+
+    <script>
+      let input = document.getElementById("input");
+      let p = document.getElementById("output");
+      function btn() {
+        const num = [...input.value].reverse().sort().join("");
+
+        p.textContent = num;
+      }
+    </script>
+  </body>
+</html>

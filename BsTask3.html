@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bs Task 3</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        padding: 10px 5px;
+        box-sizing: border-box;
+      }
+      .minDiv {
+        border: 0px solid;
+        flex-grow: 1;
+        margin: 0px 5px;
+        height: fit-content;
+        padding: 0 0 10px 0;
+        box-shadow: 5px 10px 8px 1px #888888;
+      }
+      button {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-row justify-content-between align-items-center"
+        >
+          <p>company name</p>
+          <div class="d-flex gap-3 align-items-center">
+            <p>Features</p>
+            <p>Enterprise</p>
+            <p>Support</p>
+            <p>Pricing</p>
+            <div>
+              <button class="bg-white border-1 border-primary text-primary">
+                SignUp
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 text-center mt-5">
+          <h1>Pricing</h1>
+          <p>
+            Quickly build an effective pricing table for your potential
+            customers with this Bootstrap example. It's built with default
+            Bootstrap components and utilities with little customization
+          </p>
+        </div>
+        <div class="col-3 minDiv">
+          <div class="bg-secondary p-">
+            <p class="text-center">Free</p>
+          </div>
+          <div class="d-flex flex-column gap-0 text-center p-3">
+            <h1>$0/mo</h1>
+            <p>
+              10 users included<br />2Gb of support <br />Email support <br />
+              center access
+            </p>
+            <button class="bg-white border-1 border-primary text-primary">
+              Sign up for free
+            </button>
+          </div>
+        </div>
+        <div class="col-3 minDiv">
+          <div class="bg-secondary p-">
+            <p class="text-center">Pro</p>
+          </div>
+          <div class="d-flex flex-column gap-0 text-center p-3">
+            <h1>$15/mo</h1>
+            <p>
+              20 users included<br />2Gb of support <br />Email support <br />
+              center access
+            </p>
+            <button class="bg-primary border-0 text-white">Get started</button>
+          </div>
+        </div>
+        <div class="col-3 minDiv">
+          <div class="bg-secondary p-">
+            <p class="text-center">Enterprise</p>
+          </div>
+          <div class="d-flex flex-column gap-0 text-center p-3">
+            <h1>$29/mo</h1>
+            <p>
+              30 users included<br />2Gb of support <br />Email support <br />
+              center access
+            </p>
+            <button class="bg-primary border-0 text-white">Contact us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

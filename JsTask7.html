@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js Task 7</title>
+    <style>
+      .home {
+        width: 100vw;
+        position: absolute;
+      }
+      #img {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      width="200px"
+      src="https://www.javatpoint.com/oprweb/train1.png"
+      id="img"
+    />
+    <br />
+    <h1>Click the following buttons to handle animation</h1>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+    <script>
+      let img = document.getElementById("img");
+      let count = 0;
+      let time;
+
+      function start() {
+        time = setInterval(function () {
+          count = count + 5;
+          if (count > 75) {
+            count = 0;
+          }
+          img.style.left = String(count) + "%";
+        }, 500);
+      }
+      function stop() {
+        clearInterval(time);
+      }
+    </script>
+  </body>
+</html>

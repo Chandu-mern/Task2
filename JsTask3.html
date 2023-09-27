@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Task 3</title>
+  </head>
+  <body>
+    <div>
+      <label for="1st">1st Number:</label>
+      <input id="1st" type="text" placeholder="1st num" /> <br />
+      <label for="2nd">2nd Number:</label>
+      <input id="2nd" type="text" placeholder="2nd num" />
+      <br />
+      <br />
+      <button onclick="multiply()">Multiply</button>
+      <button onclick="divide()">Divide</button>
+      <br />
+      <p>The Result is:<span id="Result"></span></p>
+    </div>
+    <script>
+      let num1 = document.getElementById("1st");
+      let num2 = document.getElementById("2nd");
+      let Result = document.getElementById("Result");
+
+      function multiply() {
+        const n1 = parseInt(num1.value);
+        const n2 = parseInt(num2.value);
+
+        Result.textContent = n1 * n2;
+      }
+
+      function divide() {
+        const n1 = parseInt(num1.value);
+        const n2 = parseInt(num2.value);
+
+        Result.textContent = n1 / n2;
+      }
+    </script>
+  </body>
+</html>

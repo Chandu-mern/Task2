@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Task 1</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1>Reverse a number</h1>
+      <input type="text" id="input" placeholder="Enter Num" />
+      <button onclick="btn()">Change</button>
+      <p>Output:<span id="output"></span></p>
+    </div>
+
+    <script>
+      let input = document.getElementById("input");
+      let p = document.getElementById("output");
+      function btn() {
+        const num = [...input.value].reverse().join("");
+
+        p.textContent = num;
+      }
+    </script>
+  </body>
+</html>

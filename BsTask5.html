@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/bdfb853d89.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Bs Task 5</title>
+  </head>
+  <style>
+    i {
+      border: 1px solid;
+      padding: 5.6px;
+      padding-bottom: 4.4px;
+    }
+    input {
+      border: 1px solid;
+      border-left: 0px solid;
+      /* border-right: 0px solid; */
+    }
+    p {
+      width: 300px;
+    }
+    .wrong {
+      border-left: 0px solid;
+    }
+  </style>
+  <body>
+    <div class="d-flex flex-column p-5">
+      <div class="d-flex flex-row align-items-center">
+        <p id="1">First Name</p>
+        <div>
+          <div class="d-flex">
+            <i class="fa-solid fa-user"></i><input type="text" id="d1" /><i
+              id="i1"
+              class="fa-solid fa-circle-xmark wrong d-none"
+            ></i>
+          </div>
+
+          <p id="p1"></p>
+        </div>
+      </div>
+      <div class="d-flex flex-row align-items-center">
+        <p id="2">Last Name</p>
+        <div>
+          <div>
+            <div class="d-flex">
+              <i class="fa-solid fa-user"></i><input type="text" id="d2" /><i
+                class="fa-solid fa-circle-xmark wrong d-none"
+                id="i2"
+              ></i>
+            </div>
+          </div>
+          <p id="p2"></p>
+        </div>
+      </div>
+      <div class="d-flex flex-row align-items-center">
+        <p id="3">Email</p>
+        <div>
+          <div class="d-flex">
+            <i class="fa-solid fa-envelope"></i><input type="text" id="d3" />
+            <i class="fa-solid fa-circle-xmark wrong d-none" id="i3"></i>
+          </div>
+
+          <p id="p3"></p>
+        </div>
+      </div>
+      <div class="d-flex flex-row align-items-center">
+        <p id="4">Phone</p>
+        <div>
+          <div class="d-flex">
+            <i class="fa-solid fa-phone"></i><input type="text" id="d4" />
+            <i class="fa-solid fa-circle-xmark wrong d-none" id="i4"></i>
+          </div>
+          <p id="p4"></p>
+        </div>
+      </div>
+      <div class="d-flex flex-row align-items-center">
+        <p id="5">Address</p>
+        <div>
+          <div class="d-flex">
+            <i class="fa-solid fa-house"></i><input type="text" id="d5" />
+            <i class="fa-solid fa-circle-xmark wrong d-none" id="i5"></i>
+          </div>
+          <p id="p5"></p>
+        </div>
+      </div>
+      <div class="d-flex flex-row align-items-center">
+        <p id="6">City</p>
+        <div>
+          <div class="d-flex">
+            <i class="fa-solid fa-house"></i><input type="text" id="d6" />
+            <i class="fa-solid fa-circle-xmark wrong d-none" id="i6"></i>
+          </div>
+          <p id="p6"></p>
+        </div>
+      </div>
+      <div class="d-flex flex-row justify-content-start align-items-center">
+        <p>State</p>
+        <div>
+          <i class="fa-solid fa-bars"></i
+          ><input style="border-right: 1px solid" type="text" />
+        </div>
+      </div>
+      <div class="d-flex">
+        <p>Do you have hosting?</p>
+        <div
+          class="d-flex flex-row justify-content-center align-items-center gap-3"
+        >
+          <div><input type="radio" name="same" /><label>yes</label></div>
+          <div><input type="radio" name="same" /><label>no</label></div>
+        </div>
+      </div>
+      <div class="d-flex">
+        <p>Project Description</p>
+        <div class="d-flex flex-column gap-3">
+          <div>
+            <i class="fa-solid fa-pen"></i
+            ><input style="border-right: 1px solid" type="text" />
+          </div>
+        </div>
+      </div>
+      <div class="align-self-end">
+        <button
+          onclick="btn()"
+          style="
+            color: white;
+            background-color: yellow;
+            border: 1px solid white;
+            padding: 10px;
+          "
+        >
+          Submit <i class="fa-brands fa-telegram"></i>
+        </button>
+      </div>
+      <p id="idm"></p>
+    </div>
+    <script>
+      let p1 = document.getElementById("p1");
+      let p2 = document.getElementById("p2");
+      let p3 = document.getElementById("p3");
+      let p4 = document.getElementById("p4");
+      let p5 = document.getElementById("p5");
+      let p6 = document.getElementById("p6");
+      let d1 = document.getElementById("d1");
+      let d2 = document.getElementById("d2");
+      let d3 = document.getElementById("d3");
+      let d4 = document.getElementById("d4");
+      let d5 = document.getElementById("d5");
+      let d6 = document.getElementById("d6");
+      let idm = document.getElementById("idm");
+      let c1 = document.getElementById("1");
+      let c2 = document.getElementById("2");
+      let c3 = document.getElementById("3");
+      let c4 = document.getElementById("4");
+      let c5 = document.getElementById("5");
+      let c6 = document.getElementById("6");
+      let i1 = document.getElementById("i1");
+      let i2 = document.getElementById("i2");
+      let i3 = document.getElementById("i3");
+      let i4 = document.getElementById("i4");
+      let i5 = document.getElementById("i5");
+      let i6 = document.getElementById("i6");
+      function btn() {
+        if (d1.value === "") {
+          p1.textContent = "please Provied the first Name";
+          p1.style.color = "red";
+          c1.style.color = "red";
+          c1.style.fontWeight = "bolder";
+          i1.classList.remove("d-none");
+        } else {
+          i1.classList.add("d-none");
+          c1.style.color = "black";
+          c1.style.fontWeight = "normal";
+
+          p1.textContent = "";
+        }
+        if (d2.value === "") {
+          p2.textContent = "please Provied the Lasr Name";
+          p2.style.color = "red";
+          c2.style.color = "red";
+          c2.style.fontWeight = "bolder";
+          i2.classList.remove("d-none");
+        } else {
+          i2.classList.add("d-none");
+          c2.style.color = "black";
+          c2.style.fontWeight = "normal";
+          p2.textContent = "";
+        }
+        if (d3.value === "") {
+          p3.textContent = "please Provied the Email";
+          p3.style.color = "red";
+          c3.style.color = "red";
+          c3.style.fontWeight = "bolder";
+          i3.classList.remove("d-none");
+        } else {
+          i3.classList.add("d-none");
+          c3.style.color = "black";
+          c3.style.fontWeight = "normal";
+          p3.textContent = "";
+        }
+        if (d4.value === "") {
+          p4.textContent = "please Provied the Phone";
+          p4.style.color = "red";
+          c4.style.color = "red";
+          c4.style.fontWeight = "bolder";
+          i4.classList.remove("d-none");
+        } else {
+          i4.classList.add("d-none");
+          c4.style.color = "black";
+          c4.style.fontWeight = "normal";
+
+          p4.textContent = "";
+        }
+        if (d5.value === "") {
+          p5.textContent = "please Provied the Address";
+          p5.style.color = "red";
+          c5.style.color = "red";
+          c5.style.fontWeight = "bolder";
+          i5.classList.remove("d-none");
+        } else {
+          i5.classList.add("d-none");
+          c5.style.color = "black";
+          c5.style.fontWeight = "normal";
+
+          p5.textContent = "";
+        }
+        if (d6.value === "") {
+          p6.textContent = "please Provied the city";
+          p6.style.color = "red";
+          c6.style.color = "red";
+          c6.style.fontWeight = "bolder";
+          i6.classList.remove("d-none");
+        } else {
+          i6.classList.add("d-none");
+          c6.style.color = "black";
+          c6.style.fontWeight = "normal";
+
+          p6.textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>

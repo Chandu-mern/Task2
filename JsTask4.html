@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Task 4</title>
+  </head>
+  <body>
+    <div>
+      <button onclick="date()">Show date</button>
+      <p id="date"></p>
+      <button onclick="time()">Show Time</button>
+      <p id="Time"></p>
+    </div>
+    <script>
+      let date01 = document.getElementById("date");
+      let time01 = document.getElementById("Time");
+
+      function date() {
+        const nowdate = new Date();
+        date01.textContent =
+          String(nowdate.getDate()) +
+          "/" +
+          String(nowdate.getMonth()) +
+          "/" +
+          String(nowdate.getFullYear());
+      }
+
+      function time() {
+        const nowdate = new Date();
+        time01.textContent = nowdate;
+      }
+    </script>
+  </body>
+</html>

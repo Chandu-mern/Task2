@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bs Task 6</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/bdfb853d89.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      p {
+        color: red;
+      }
+      input {
+        border: 1px solid;
+        border-radius: 0;
+      }
+      i {
+        border: 1px solid red;
+        border-left: 0px solid;
+        padding: 5px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <div>
+        <div class="d-flex flex-column">
+          <label>Name:</label>
+          <div class="d-flex">
+            <input type="text" id="in1" />
+            <div class="d-none" id="icon1">
+              <i class="fa-solid fa-circle-info"></i>
+            </div>
+          </div>
+
+          <p id="id1"></p>
+        </div>
+        <div class="d-flex flex-column">
+          <label>Email:</label>
+          <div class="d-flex">
+            <input type="text" id="in2" />
+            <div class="d-none" id="icon2">
+              <i class="fa-solid fa-circle-info"></i>
+            </div>
+          </div>
+          <p id="id2"></p>
+        </div>
+        <div class="d-flex flex-column">
+          <label>Password:</label>
+          <div class="d-flex">
+            <input type="text" id="in3" />
+            <div class="d-none" id="icon3">
+              <i class="fa-solid fa-circle-info"></i>
+            </div>
+          </div>
+          <p id="id3"></p>
+        </div>
+        <div class="d-flex flex-column">
+          <label>Hobbies:</label>
+          <select id="in4">
+            <option>Optional</option>
+            <option>reading Books</option>
+            <option>Playing</option>
+            <option>Movies</option>
+          </select>
+          <p id="id4"></p>
+        </div>
+        <button
+          onclick="submit()"
+          class="text-white bg-danger border-0 p-1 w-100"
+        >
+          Submit
+        </button>
+        <p id="id5"></p>
+      </div>
+    </div>
+    <script>
+      let icon1 = document.getElementById("icon1");
+      let icon2 = document.getElementById("icon2");
+      let icon3 = document.getElementById("icon3");
+      let in1 = document.getElementById("in1");
+      let in2 = document.getElementById("in2");
+      let in3 = document.getElementById("in3");
+      let in4 = document.getElementById("in4");
+      let id1 = document.getElementById("id1");
+      let id2 = document.getElementById("id2");
+      let id3 = document.getElementById("id3");
+      let id4 = document.getElementById("id4");
+      let id5 = document.getElementById("id5");
+      function submit() {
+        if (in1.value === "") {
+          id1.textContent = "Name is requried";
+          in1.style.borderColor = "red";
+          in1.style.borderRight = "0px solid";
+          icon1.classList.toggle("d-none");
+        }
+        if (in2.value === "") {
+          id2.textContent = "Email is requried";
+          in2.style.borderColor = "red";
+          in2.style.borderRight = "0px solid";
+          icon2.classList.toggle("d-none");
+        }
+        if (in3.value === "") {
+          id3.textContent = "Password is requried";
+          in3.style.borderColor = "red";
+          in3.style.borderRight = "0px solid";
+          icon3.classList.toggle("d-none");
+        }
+        if (in1.value !== "" && in2.value !== "" && in3.value !== "") {
+          id5.textContent = "submitted";
+          in1.value = "";
+          in2.value = "";
+          in3.value = "";
+          id1.textContent = "";
+          id2.textContent = "";
+          id3.textContent = "";
+          icon3.classList.toggle("d-none");
+          icon1.classList.toggle("d-none");
+          icon2.classList.toggle("d-none");
+          in1.style.borderColor = "black";
+          in1.style.borderRight = "1px solid";
+          in2.style.borderColor = "black";
+          in2.style.borderRight = "1px solid";
+          in3.style.borderColor = "black";
+          in3.style.borderRight = "1px solid";
+        }
+      }
+    </script>
+  </body>
+</html>
